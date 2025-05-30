@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCore — Разработка в любых сферах</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="top-buttons">
+    <button class="language-btn" onclick="switchToEnglish()">
+      <i class="fas fa-language"></i> English version
+    </button>
+    <button class="devcore-links-btn" id="devcore-links">
+      <i class="fas fa-link"></i> DevCore Links
+    </button>
+  </div>
+  
+  <header>
+    <div class="container">
+      <h1>DevCore</h1>
+      <p class="subtitle">Python, Web (HTML, CSS, JS), C++</p>
+      <a href="https://t.me/m/wnBMSWRBNGEy" target="_blank" class="btn">Запросить проект</a>
+    </div>
+  </header>
+
+  <!-- Остальные секции остаются без изменений -->
+
+  <script>
+    function switchToEnglish() {
+      localStorage.setItem('lang', 'en');
+      window.location.href = '/en';
+    }
+
+    // Модальное окно
+    document.getElementById('devcore-links').addEventListener('click', function() {
+      document.getElementById('modal-overlay').classList.add('active');
+    });
+  </script>
+</body>
+</html>
