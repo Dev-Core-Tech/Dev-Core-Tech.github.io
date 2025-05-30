@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="top-buttons">
-    <button class="language-btn" onclick="switchToEnglish()">
+    <button class="language-btn" onclick="window.location.href='/en'">
       <i class="fas fa-language"></i> English version
     </button>
     <button class="devcore-links-btn" id="devcore-links">
@@ -25,17 +25,90 @@
     </div>
   </header>
 
-  <!-- Остальные секции остаются без изменений -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Связь с нами</h2>
+      <p class="contact-large">
+        <a href="https://t.me/Kiriehka_ww" target="_blank">DevCore manager</a> — Личные сообщения менеджеру в Telegram
+      </p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h2>О компании</h2>
+      <p>
+        Мы — команда разработчиков DevCore. Наш фокус — на практичные решения: от умных Telegram-ботов и парсеров до управления оборудованием и веб-интерфейсов.
+        Используем Python, автоматизацию, API и современные технологии. Работаем быстро, надёжно и без лишней бюрократии.
+      </p>
+    </div>
+  </section>
+
+  <section class="cases">
+    <div class="container">
+      <h2>Кейсы</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Таймер событий</h3>
+          <p>Веб-приложение для отслеживания времени до начала/от конца события</p>
+        </div>
+        <div class="card">
+          <h3>Telegram-конструктор</h3>
+          <p>Система, позволяющая создавать и управлять ботами через одного управляющего Telegram-бота.</p>
+        </div>
+        <div class="card">
+          <h3>Парсер X.com → Telegram</h3>
+          <p>Решение для сбора контента с X через зеркала и пересылки постов в Telegram-каналы.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <h2>Проекты</h2>
+      <ul class="projects-list">
+        <li><strong>Наш телеграм бот</strong> — Нажмите <a href="https://t.me/WorldOpenCode_Bot" target="_blank">"Запросить проект"</a> для тестирования</li>
+        <li><strong>Автозагрузчик на видеохостинги</strong> — загрузка и публикация видео с расписанием</li>
+        <li><strong>Интеграции с API</strong> — Telegram, Discord, X.com и другие платформы</li>
+        <li><strong>Графические интерфейсы</strong> — Flet, FastAPI, PyQt для настольных и веб-приложений</li>
+      </ul>
+    </div>
+  </section>
+
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <h3>DevCore Links</h3>
+      <div class="modal-links">
+        <a href="https://github.com/KirillxC" target="_blank">GitHub</a>
+        <a href="https://t.me/DevCoreTech" target="_blank">Telegram Channel</a>
+        <a href="https://t.me/Kiriehka_ww" target="_blank">Сообщение менеджеру</a>
+      </div>
+      <button id="close-modal" class="btn">Закрыть</button>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DevCore.</p>
+    </div>
+  </footer>
 
   <script>
-    function switchToEnglish() {
-      localStorage.setItem('lang', 'en');
-      window.location.href = '/en';
-    }
-
     // Модальное окно
     document.getElementById('devcore-links').addEventListener('click', function() {
       document.getElementById('modal-overlay').classList.add('active');
+    });
+
+    document.getElementById('close-modal').addEventListener('click', function() {
+      document.getElementById('modal-overlay').classList.remove('active');
+    });
+
+    // Закрытие по клику вне окна
+    document.getElementById('modal-overlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
     });
   </script>
 </body>

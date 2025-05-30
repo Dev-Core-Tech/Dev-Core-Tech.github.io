@@ -5,12 +5,14 @@
   <meta http-equiv="refresh" content="0; url=/ru">
   <title>DevCore</title>
   <script>
-    localStorage.getItem('lang') === 'en' 
-      ? window.location.href = '/en'
-      : window.location.href = '/ru';
+    if(localStorage.getItem('lang') === 'en') {
+      window.location.href = '/en';
+    } else {
+      window.location.href = '/ru';
+    }
   </script>
 </head>
 <body>
-  <p>Перенаправление на русскую версию...</p>
+  <p>Redirecting...</p>
 </body>
 </html>

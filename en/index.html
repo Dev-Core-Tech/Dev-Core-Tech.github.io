@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="top-buttons">
-    <button class="language-btn" onclick="switchToRussian()">
+    <button class="language-btn" onclick="window.location.href='/ru'">
       <i class="fas fa-language"></i> Русская версия
     </button>
     <button class="devcore-links-btn" id="devcore-links">
@@ -26,17 +26,21 @@
   </header>
 
   <!-- Здесь должен быть английский контент -->
+  
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <h3>DevCore Links</h3>
+      <div class="modal-links">
+        <a href="https://github.com/KirillxC" target="_blank">GitHub</a>
+        <a href="https://t.me/DevCoreTech" target="_blank">Telegram Channel</a>
+        <a href="https://t.me/Kiriehka_ww" target="_blank">Contact manager</a>
+      </div>
+      <button id="close-modal" class="btn">Close</button>
+    </div>
+  </div>
 
   <script>
-    function switchToRussian() {
-      localStorage.setItem('lang', 'ru');
-      window.location.href = '/ru';
-    }
-
-    // Модальное окно
-    document.getElementById('devcore-links').addEventListener('click', function() {
-      document.getElementById('modal-overlay').classList.add('active');
-    });
+    // Тот же скрипт для модального окна
   </script>
 </body>
 </html>
