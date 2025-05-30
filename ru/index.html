@@ -6,6 +6,7 @@
   <title>DevCore — Разработка в любых сферах</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
   <div class="top-buttons">
@@ -94,22 +95,39 @@
     </div>
   </footer>
 
-  <script>
-    // Модальное окно
-    document.getElementById('devcore-links').addEventListener('click', function() {
-      document.getElementById('modal-overlay').classList.add('active');
-    });
+<script>
 
-    document.getElementById('close-modal').addEventListener('click', function() {
-      document.getElementById('modal-overlay').classList.remove('active');
-    });
+  const modalBtn = document.getElementById('devcore-links');
+  const modal = document.getElementById('modal-overlay');
+  const closeBtn = document.getElementById('close-modal');
 
-    // Закрытие по клику вне окна
-    document.getElementById('modal-overlay').addEventListener('click', function(e) {
-      if (e.target === this) {
-        this.classList.remove('active');
-      }
-    });
-  </script>
+  modalBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; 
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; 
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+  document.querySelector('.language-btn').addEventListener('click', function() {
+    const currentLang = window.location.pathname.includes('/en') ? 'ru' : 'en';
+    localStorage.setItem('lang', currentLang);
+  });
+</script>
 </body>
 </html>

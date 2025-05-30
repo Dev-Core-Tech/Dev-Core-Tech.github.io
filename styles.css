@@ -215,3 +215,81 @@ footer {
     flex-direction: column;
   }
 }
+/* Мобильные стили */
+@media (max-width: 768px) {
+  .top-buttons {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+  
+  .devcore-links-btn, .language-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+  
+  /* Уменьшаем шапку */
+  header {
+    padding: 30px 0;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 30px; /* Добавляем отступ сверху */
+  }
+  
+  /* Адаптация модального окна */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .modal-links a {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Уменьшаем карточки */
+  .card {
+    padding: 15px;
+  }
+}
+
+/* Дополнительные исправления для модального окна */
+.modal-overlay {
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.modal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-links a {
+  display: block;
+  padding: 12px;
+  background: rgba(255,255,255,0.1);
+  color: #4dabf7;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.modal-links a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+#close-modal {
+  margin-top: 20px;
+  width: 100%;
+}
