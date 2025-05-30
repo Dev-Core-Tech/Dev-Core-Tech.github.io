@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DevCore — Разработка в любых сферах</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <button class="worldopencode-btn">DevCore Links</button>
+  <div class="top-buttons">
+    <button class="language-btn">English version</button>
+    <button class="devcore-links-btn">
+      <i class="fas fa-link"></i> DevCore Links
+    </button>
+  </div>
+  
   <header>
     <div class="container">
       <h1>DevCore</h1>
@@ -19,9 +26,8 @@
   <section class="contact" id="contact">
     <div class="container">
       <h2>Связь с нами</h2>
-
       <p class="contact-large">
-        <a href="https://t.me/Kiriehka_ww" target="_blank">DevCore manager</a>  — Личные сообщения менеджеру в Telegram
+        <a href="https://t.me/Kiriehka_ww" target="_blank">DevCore manager</a> — Личные сообщения менеджеру в Telegram
       </p>
     </div>
   </section>
@@ -39,17 +45,22 @@
   <section class="cases">
     <div class="container">
       <h2>Кейсы</h2>
-      <div class="card">
-        <h3>Таймер событиый</h3>
-        <p>Веб-приложение для отслеживания времени до начала/от конца события</p>
-      </div>
-      <div class="card">
-        <h3>Telegram-конструктор</h3>
-        <p>Система, позволяющая создавать и управлять ботами через одного управляющего Telegram-бота. Удобно, гибко и без кода.</p>
-      </div>
-      <div class="card">
-        <h3>Парсер X.com → Telegram</h3>
-        <p>Решение для сбора контента с X через зеркала (например, Nitter), и пересылки постов с текстом и фото в Telegram-каналы.</p>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-clock"></i></div>
+          <h3>Таймер событий</h3>
+          <p>Веб-приложение для отслеживания времени до начала/от конца события</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-robot"></i></div>
+          <h3>Telegram-конструктор</h3>
+          <p>Система, позволяющая создавать и управлять ботами через одного управляющего Telegram-бота. Удобно, гибко и без кода.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Парсер X.com → Telegram</h3>
+          <p>Решение для сбора контента с X через зеркала (например, Nitter), и пересылки постов с текстом и фото в Telegram-каналы.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -57,55 +68,80 @@
   <section class="projects">
     <div class="container">
       <h2>Проекты</h2>
-      <ul>
-        <li>⚙️ <strong>Наш телеграм бот</strong> — Нажмите  <a href="https://t.me/WorldOpenCode_Bot" target="_blank">"Запросить проект"</a> для тестирования:)</li>
-        <li>📤 <strong>Автозагрузчик на видеохостинги</strong> — загрузка и публикация видео с расписанием</li>
-        <li>📦 <strong>Интеграции с API</strong> — Telegram, Discord, X.com и любые другие платформы</li>
-        <li>🔧 <strong>Графические интерфейсы</strong> — Flet, FastAPI, PyQt для настольных и веб-приложений</li>
+      <ul class="projects-list">
+        <li>
+          <i class="fas fa-cog"></i>
+          <strong>Наш телеграм бот</strong> — Нажмите <a href="https://t.me/WorldOpenCode_Bot" target="_blank">"Запросить проект"</a> для тестирования:)
+        </li>
+        <li>
+          <i class="fas fa-upload"></i>
+          <strong>Автозагрузчик на видеохостинги</strong> — загрузка и публикация видео с расписанием
+        </li>
+        <li>
+          <i class="fas fa-plug"></i>
+          <strong>Интеграции с API</strong> — Telegram, Discord, X.com и любые другие платформы
+        </li>
+        <li>
+          <i class="fas fa-window-maximize"></i>
+          <strong>Графические интерфейсы</strong> — Flet, FastAPI, PyQt для настольных и веб-приложений
+        </li>
       </ul>
     </div>
   </section>
-      <section class="contact" id="contact">
+
+  <section class="contact" id="contact">
     <div class="container">
-        
-    <div id="modal-overlay" class="modal-overlay hidden">
-     <div class="modal-content">
-      <h3>DevCore</h3>
-       <div class="modal-links">
-        <a href="https://github.com/KirillxC" target="_blank">GitHub</a>
-        <a href="http://z95062qz.beget.tech/" target="_blank">Портфолио</a>
-        <a href="https://t.me/DevCoreTech" target="_blank">Telegram Channel</a>
-        <a href="https://t.me/Kiriehka_ww" target="_blank">Сообщение менеджреру</a>
-       </div>
-      <button id="close-modal" class="modal-close-btn">Закрыть</button>
-     </div>
+      <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+          <h3>DevCore</h3>
+          <div class="modal-links">
+            <a href="https://github.com/KirillxC" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://t.me/DevCoreTech" target="_blank">
+              <i class="fab fa-telegram"></i> Telegram Channel
+            </a>
+            <a href="https://t.me/Kiriehka_ww" target="_blank">
+              <i class="fas fa-envelope"></i> Сообщение менеджеру
+            </a>
+          </div>
+          <button id="close-modal" class="modal-close-btn">Закрыть</button>
+        </div>
+      </div>
     </div>
   </section>
   
   <footer>
-    
     <div class="container">
       <p>&copy; 2025 DevCore.</p>
     </div>
   </footer>
-<script>
-  const menuBtn = document.querySelector('.worldopencode-btn');
-  const modalOverlay = document.querySelector('.modal-overlay');
-  const closeModalBtn = document.querySelector('#close-modal');
 
-  menuBtn.addEventListener('click', () => {
-    modalOverlay.classList.add('active');
-  });
+  <script>
+    // Modal functionality
+    const menuBtn = document.querySelector('.devcore-links-btn');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const closeModalBtn = document.querySelector('#close-modal');
+    const languageBtn = document.querySelector('.language-btn');
 
-  closeModalBtn.addEventListener('click', () => {
-    modalOverlay.classList.remove('active');
-  });
+    menuBtn.addEventListener('click', () => {
+      modalOverlay.classList.add('active');
+    });
 
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
+    closeModalBtn.addEventListener('click', () => {
       modalOverlay.classList.remove('active');
-    }
-  });
-</script>
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+      }
+    });
+
+    // Language switch functionality
+    languageBtn.addEventListener('click', () => {
+      window.location.href = '/en';
+    });
+  </script>
 </body>
 </html>
