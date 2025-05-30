@@ -1,4 +1,3 @@
-/* Reset и базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ body {
   padding: 0 20px;
 }
 
-/* Кнопки в шапке */
 .top-buttons {
   position: fixed;
   top: 20px;
@@ -50,7 +48,6 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Шапка */
 header {
   background: linear-gradient(135deg, #111 0%, #222 100%);
   padding: 60px 0;
@@ -87,7 +84,6 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* Секции */
 section {
   padding: 60px 0;
 }
@@ -109,7 +105,6 @@ section h2::after {
   background: #007bff;
 }
 
-/* Карточки */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,7 +135,6 @@ section h2::after {
   color: #ccc;
 }
 
-/* Список проектов */
 .projects-list {
   list-style: none;
 }
@@ -159,7 +153,6 @@ section h2::after {
   left: 0;
 }
 
-/* Футер */
 footer {
   background: #111;
   padding: 30px 0;
@@ -167,7 +160,6 @@ footer {
   border-top: 1px solid #444;
 }
 
-/* Модальное окно */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -197,7 +189,6 @@ footer {
   max-width: 450px;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   header {
     padding: 40px 0;
@@ -215,7 +206,7 @@ footer {
     flex-direction: column;
   }
 }
-/* Мобильные стили */
+
 @media (max-width: 768px) {
   .top-buttons {
     top: 10px;
@@ -229,17 +220,15 @@ footer {
     border-radius: 20px;
   }
   
-  /* Уменьшаем шапку */
   header {
     padding: 30px 0;
   }
   
   h1 {
     font-size: 1.8rem;
-    margin-top: 30px; /* Добавляем отступ сверху */
+    margin-top: 30px;
   }
   
-  /* Адаптация модального окна */
   .modal-content {
     width: 95%;
     padding: 20px;
@@ -250,13 +239,11 @@ footer {
     font-size: 14px;
   }
   
-  /* Уменьшаем карточки */
   .card {
     padding: 15px;
   }
 }
 
-/* Дополнительные исправления для модального окна */
 .modal-overlay {
   backdrop-filter: blur(5px);
 }
@@ -293,7 +280,6 @@ footer {
   margin-top: 20px;
   width: 100%;
 }
-/* Модальное окно — полный редизайн */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -387,7 +373,6 @@ footer {
   background: #0062cc;
 }
 
-/* Адаптив для модалки */
 @media (max-width: 480px) {
   .modal-content {
     padding: 20px;
