@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevCore - Development in all spheres</title>
+  <title>DevCore - Development in All Areas</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -22,62 +22,107 @@
     <div class="container">
       <h1>DevCore</h1>
       <p class="subtitle">Python, Web (HTML, CSS, JS), C++</p>
-      <a href="https://t.me/m/wnBMSWRBNGEy" target="_blank" class="btn">Request project</a>
+      <a href="https://t.me/m/wnBMSWRBNGEy" target="_blank" class="btn">Request Project</a>
     </div>
   </header>
 
-  <!-- Здесь должен быть английский контент -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="contact-large">
+        <a href="https://t.me/Kiriehka_ww" target="_blank">DevCore Manager</a> — Direct messages to manager in Telegram
+      </p>
+    </div>
+  </section>
 
-    <div id="modal-overlay" class="modal-overlay">
+  <section class="about">
+    <div class="container">
+      <h2>About Company</h2>
+      <p>
+        We are the DevCore development team. We focus on practical solutions: from smart Telegram bots and parsers to equipment management and web interfaces.
+        We use Python, automation, APIs and modern technologies. We work quickly, reliably and without unnecessary bureaucracy.
+      </p>
+    </div>
+  </section>
+
+  <section class="cases">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Event Timer</h3>
+          <p>Web application for tracking time until event start/end</p>
+        </div>
+        <div class="card">
+          <h3>Telegram Bot Constructor</h3>
+          <p>A system that allows creating and managing bots through one master Telegram bot.</p>
+        </div>
+        <div class="card">
+          <h3>X.com → Telegram Parser</h3>
+          <p>Solution for collecting content from X via mirrors and forwarding posts to Telegram channels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li><strong>Our Telegram bot</strong> — Click <a href="https://t.me/WorldOpenCode_Bot" target="_blank">"Request Project"</a> to test</li>
+        <li><strong>Video hosting autouploader</strong> — Scheduled video upload and publishing</li>
+        <li><strong>API integrations</strong> — Telegram, Discord, X.com and other platforms</li>
+        <li><strong>Graphical interfaces</strong> — Flet, FastAPI, PyQt for desktop and web applications</li>
+      </ul>
+    </div>
+  </section>
+
+  <div id="modal-overlay" class="modal-overlay">
     <div class="modal-content">
-        <h3>DevCore Links</h3>
-        <div class="modal-links">
+      <h3>DevCore Links</h3>
+      <div class="modal-links">
         <a href="https://github.com/KirillxC" target="_blank">
-            <i class="fab fa-github"></i>
-            GitHub
+          <i class="fab fa-github"></i>
+          GitHub
         </a>
         <a href="https://t.me/DevCoreTech" target="_blank">
-            <i class="fab fa-telegram"></i>
-            Telegram Channel
+          <i class="fab fa-telegram"></i>
+          Telegram Channel
         </a>
         <a href="https://t.me/Kiriehka_ww" target="_blank">
-            <i class="fas fa-user-tie"></i>
-            Менеджер
+          <i class="fas fa-user-tie"></i>
+          Manager
         </a>
-        </div>
-        <button id="close-modal" class="btn">Закрыть</button>
+      </div>
+      <button id="close-modal" class="btn">Close</button>
     </div>
-    </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('modal-overlay');
-  const closeBtn = document.getElementById('close-modal');
-  
-  // Открытие по кнопке
-  document.querySelector('.devcore-links-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
-  
-  // Закрытие
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  
-  closeBtn.addEventListener('click', closeModal);
-  
-  // Закрытие по клику вне окна
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) closeModal();
-  });
-  
-  // Закрытие по ESC
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-});
-</script>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('modal-overlay');
+      const closeBtn = document.getElementById('close-modal');
+      
+      document.querySelector('.devcore-links-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+      
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+      });
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
 </body>
 </html>
